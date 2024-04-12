@@ -1,0 +1,1 @@
+SELECT welcome_msg_func('Jerry') FROM DUAL;
