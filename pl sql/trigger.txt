@@ -1,0 +1,10 @@
+create or replace trigger stud_trig after insert on student
+  2  for each row
+  3  declare
+  4  tot number:=0;
+  5  begin
+  6  tot:=:new.m1+:new.m2;
+  7  insert into student_mark values(:new.sid,tot);
+  8  dbms_output.put_line('After insert trigger activated: ');
+  9  end;
+ 10  /
